@@ -35,6 +35,15 @@ const quizData = [
       correct: "c",
     },
 
+    
+    {
+      question:
+        "You Finished Imitate level",
+  
+    },
+
+    
+
  ];
 
 
@@ -49,6 +58,7 @@ const quizData = [
   const b_text = document.getElementById("b_text");
   const c_text = document.getElementById("c_text");
   const butt = document.getElementById("butt");
+  let answersList = document.getElementById('answersList')
 
 //   variabels
   
@@ -87,7 +97,7 @@ const quizData = [
 
     butt.addEventListener("click",() =>{
     const answer = getCheckedAnswer();
-    if(!answer){
+    if(!answer && allscore != 5){
         alert("You Should Select an Answer First !")
         return;
     }
@@ -111,10 +121,13 @@ const quizData = [
         sessionStorage.setItem('score', score)
 
 
-        if (allscore == 3)
+        if (allscore == 4)
         {
+        
           allscore++
           butt.innerHTML = "<a href='adapt-Level.html' style='text-decoration:none;color:white'>Finish</a>"
+          answersList.style.display = 'none'   
+
         }
        
 

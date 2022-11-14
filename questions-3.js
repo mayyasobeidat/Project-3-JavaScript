@@ -97,6 +97,12 @@
       correct: "b",
     },
 
+    {
+      question:
+        "You Finished Transpose Level",
+  
+    },
+
   ];
 
 
@@ -111,6 +117,8 @@
    const b_text = document.getElementById("b_text");
    const c_text = document.getElementById("c_text");
    const butt = document.getElementById("butt");
+   let answersList = document.getElementById('answersList')
+
  
  //   variabels
    
@@ -149,8 +157,8 @@
  
      butt.addEventListener("click",() =>{
      const answer = getCheckedAnswer();
-     if(!answer){
-         alert("You Should Select an Answer First !")
+     if(!answer && allscore != 11){
+      alert("You Should Select an Answer First !")
          return;
      }
  
@@ -173,11 +181,11 @@
          sessionStorage.setItem('score', score)
  
  
-         if (allscore == 9)
+         if (allscore == 10)
          {
-           allscore++
-           butt.style.position = 'relative';
-           butt.innerHTML = "<a href='result.html' style=';text-decoration:none;color:white'>Finish</a>"
+          allscore++
+          butt.innerHTML = "<a href='-Level.html' style='text-decoration:none;color:white'>Finish</a>"
+          answersList.style.display = 'none'   
          }
         
  

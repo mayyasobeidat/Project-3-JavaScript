@@ -58,6 +58,13 @@
       c: "c.	<input type='check'>",
       correct: "a",
     },
+
+    {
+      question:
+        "You Finished Adapt Level",
+  
+    },
+
   ];
 
 
@@ -72,6 +79,8 @@
   const b_text = document.getElementById("b_text");
   const c_text = document.getElementById("c_text");
   const butt = document.getElementById("butt");
+  let answersList = document.getElementById('answersList')
+
 
 //   variabels
   
@@ -110,8 +119,8 @@
 
     butt.addEventListener("click",() =>{
     const answer = getCheckedAnswer();
-    if(!answer){
-        alert("You Should Select an Answer First !")
+    if(!answer && allscore != 7){
+      alert("You Should Select an Answer First !")
         return;
     }
 
@@ -134,11 +143,12 @@
         sessionStorage.setItem('score', score)
 
 
-        if (allscore == 5)
+        if (allscore == 6)
         {
           allscore++
-          butt.style.position = 'relative';
           butt.innerHTML = "<a href='transpose-Level.html' style='text-decoration:none;color:white'>Finish</a>"
+          answersList.style.display = 'none'   
+
         }
        
 
