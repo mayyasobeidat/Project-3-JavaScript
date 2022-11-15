@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginup.css">
+    <script src="https://kit.fontawesome.com/5a1098c060.js" crossorigin="anonymous"></script>
+</head>
+<body>
+      <div id="login">
+    <div class="login_content">
+        <div class="login_img"><img src="../images/Sign up.gif" id="img1"></div>
+        <div class="login_form">
+            <form class="login_create " id="login-up" >
+                <h1 class="login-title">Create Account</h1>
+                <div class="login-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="username" class="login-inbut" id="username" onchange="registerPass(this)">
+                </div>
+
+                <div class="login-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Email" class="login-inbut" id="email"  onchange="registerPass(this)" >
+                </div>
+
+
+                <div class="login-box">
+                    <i class="fa-sharp fa-solid fa-lock"></i>
+                    <input type="password" placeholder="password" class="login-inbut" id="password" onchange="registerPass(this)">
+                </div>
+                <div class="login-box">
+                    <i class="fa-solid fa-repeat"></i>
+                    <input type="password" placeholder="Repeat password" class="login-inbut" id="repeat-password" onchange="registerPass(this)">
+                </div>
+
+                <div id="errors">
+                 
+                </div>
+                <a href="" style="display:none;" id="exist"></a>
+              
+                <a onclick="repasss()" class="login-button"  id="signup">Sign Up</a>
+                
+                <div class="hava-account">
+                    <!-- <p id="alert"></p> -->
+                    <span class="login-account">Already have an Account?</span>
+                    <a href="../login/login.html" class="login-sigup" id="sigin-in">Sign In</a>
+                </div>
+                <!-- <div class="login-social">
+                    <a href="#" class="login-social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="login-social-icon"><i class="fa-brands fa-twittwr"></i></a>
+                    <a href="#" class="login-social-icon"><i class="fa-brands fa-google"></i></a>
+
+
+                      
+                </div> -->
+            </form>
+        </div>
+    </div>
+      </div>
+    
+      <div class="alert"  style="display:none;" id="alert">
+        <i id="iconss" class="fa-sharp fa-solid fa-circle-exclamation"></i>
+        Please Fill All Fields</div>
+
+
+
+
+
+
+      <script src="loginup.js"></script>
+</body>
+</html

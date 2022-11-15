@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== swiper slider===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo">  <a href="../home/index.html"><img src="image/4939715.png" alt=""></a></span>       
+
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><img src="image/4939715.png" alt=""></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../cards/cards.html">Developers</a></li>
+                    <li><a href="../contact/contactus.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="mayyas">
+    <!-- slider part -->
+    <div class="container">
+        <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="image/am-i-doing-it-right-group-young-people-casual-clothes-working-modern-office.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="image/cheerful-mood-group-people-business-conference-modern-classroom-daytime.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="image/screen-with-white-color-put-your-text-there-group-young-people-casual-clothes-working-modern-office.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="image/spacious-area-group-young-people-casual-clothes-working-modern-office.jpg" alt=""></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+    </div>
+</div>
+
+
+
+<div id="academy">
+    <h1>Developers Academy </h1>
+    <p>LEARN HOW TO CODE AND DEVELOP A NEW SET OF SKILLS TO BECOME A REAL IT PROFESSIONAL.
+         Find a delivery option that will work around your schedule. Through hands-on,
+          project-based course work, our immersive, industry-relevant curriculum provides a time & cost-efficient path to becoming 
+          an employable junior developer in less than a year. Choose from two study modes - Accelerated (6 months) or Standard (10 months).
+        
+        </p>
+        <br>
+        <a href="../login/login.html">log in</a>
+</div>
+
+</div>
+<footer id="footer1">
+    <p id="rights">© 2022 Developers Academy. All Rights Reserved</p>
+  </footer>
+
+
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+
+      
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+    <!-- ===== swiper slider===== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:3000,
+            disableOnInteraction:false,
+        },
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable : true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+
+</body>
+</html>

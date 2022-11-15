@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="page()">
+    <nav id="navbar">
+
+      <a href="../home/index.html"><img id="logo" src="../images/logo.png"></a>
+
+      </nav>
+    <div id="result-container">
+        <div id="result-left-side">
+            <p id="result-paragraph">
+                
+            </p>
+            <div id="line"></div>
+            <div id="score-container">
+              
+                    <div id="score-left">
+                        <p id="right-answers">Right Answers: <span></span></p>
+                        <p id="wrong-answers">Wrong Answers: <span></span></p>
+                        <p id="final-score"> Final Score: <span></span></p>
+                        <p id="try-again">Would you like to try again?</p>
+                    </div>
+                          <div id="score-right">
+                            <button id="btn-view-awnsers" class="btn-score"><a href="../answers/answerQ.html">View Answers</a> </button>
+                            <button onclick = "clearScore()" id="btn-try-again" class="btn-score"><a href="../imitate/imitate-Level.html">Try Again</a></button>
+                          </div>                
+               
+            </div>
+        </div>
+        <div id="result-right-side">
+            
+        </div>
+
+    </div>
+
+    <footer>
+        <p id="rights">© 2022 Developers Academy. All Rights Reserved</p>
+      </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

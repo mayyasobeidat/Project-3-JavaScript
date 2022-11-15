@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+
+    <script src="https://kit.fontawesome.com/5a1098c060.js" crossorigin="anonymous"></script>
+
+</head>
+<body >
+    <div id="login">
+        <div class="login_content">
+            <div class="login_img"><img src="../images/Sign up.gif" id="img1"></div>
+            <div class="login_form">
+                <form class="login_registre" id="login-in" >
+                    <h1 class="login-title">Welcome  Back </h1>
+                    <div class="login-box">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="username or email" class="login-inbut" id="username" onchange="g(this)">
+                    </div>
+
+                    <div class="login-box">
+  
+                            <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password" class="login-inbut" id="password"  onchange="g(this)">
+                    </div>
+                    
+                <div id="wrong">
+                 
+                </div>
+                    <a href="#" class="login-forgit">Forgot password?</a>
+
+                    <a  class="login-button"  id="signin" onclick="k(this)">Sign In</a>
+
+                    <div>
+                        <span class="login-account">Don't have an Account?</span>
+                        <a href="../register/loginup.html"><span class="login-sigin" id="sigin-up">Sign Up</span></a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+ 
+       
+    </div>
+
+   
+    <script src="login.js"></script>
+</body>
+</html>

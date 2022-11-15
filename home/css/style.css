@@ -1,0 +1,398 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+
+/* ===== Colours ===== */
+:root{
+    --body-color:#168371 ;
+    --nav-color:#F5F5F5;
+    --side-nav: #010718;
+    --text-color:#37474F; 
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+
+body.dark nav{
+    border: 1px solid #393838;
+
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 86%;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo img{
+    height: 15%;
+    width: 22%;
+}
+
+.menu .logo-toggle {
+    display: none;
+    width: 10%;
+    height: 12%;
+
+    
+}
+.menu .logo-toggle .logo img{
+    width: 120px;
+    height: 80px;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+    padding-right: 20px;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+  
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+
+
+.darkLight-searchBox .dark-light
+{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i
+{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+/* ================================================================= */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+flex-direction: column;
+margin-left:  0px 220px;
+}
+h2{
+    color: #F5F5F5;
+    font-size: 32px;
+    padding: 50px;
+}
+p{
+ 
+  display: block;
+    align-items: center;
+    font-size: 14px;
+    line-height: 25px;
+    width: 800px;
+   margin: 8px 0;
+    color: #F5F5F5;
+ 
+}
+
+.mayyas{
+    display: flex;
+}
+
+
+
+
+@media (max-width: 790px) {
+    nav .nav-bar .logo a{
+       font-size: 20px;  
+    }
+    nav .nav-bar .sidebarOpen{
+        display: block;
+        
+    }
+
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color:#F5F5F5;
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: #168371;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+
+
+/* Slides */
+.container{
+    margin-top: 5%;
+    width: 60%;
+    height: 600px;
+    background-color: #168371;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 10%;
+
+   
+}
+.swiper
+{margin-top: 10%;
+margin-bottom: 10%;
+    width: 90%;
+    height:fit-content;
+    margin-left: 10px;
+    
+}
+.swiper-slide img{
+    width: 100%;
+    height: 500px;
+  
+}
+.swiper .swiper-button-prev ,.swiper .swiper-button-next{
+    color: #f5f5f500;
+
+}
+.swiper .swiper-pagination-bullet-action{
+    background-color:#fff;
+    color:#fff ;
+}
+
+
+
+#academy{
+    align-items: center;
+    color: #F5F5F5;
+    justify-content: center;
+}
+#academy h1{
+    text-align: center;
+}
+#academy p{
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    margin-left: 400px;
+
+}
+#academy a{
+    text-transform: capitalize;
+   text-decoration: none;
+  font-weight: bold;
+   background-color: #F5F5F5;
+   color: #242526;
+   border: 1px solid #242526;
+   border-radius: 17px ;
+   width: 30%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 50%;
+  font-size: 25px;
+}
+#footer1{
+    background-color: #37474F;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:7%;
+    width: 100%;
+  
+  
+  }
+  
+  #rights{
+    color: #F5F5F5;
+    font-size: 10px;
+    margin-left: 45%;
+}
+
+
+@media (max-width: 480px) {
+    .swiper-slide img {
+        width: 104%;
+        height: 160px;
+    }
+
+    .container {
+        height: 270px;
+        margin-left: 5%;
+        width: 90%;
+        align-items: flex-end;
+
+        
+
+       }
+
+    nav .nav-bar .logo img {
+        width: 50%;
+
+    }
+
+    nav .nav-bar{
+        padding: 0;
+    }
+
+    #academy p {
+        margin-left: 0;
+    }
+p{
+    width: 100%;
+}
+#academy p {
+    text-align: center;
+    display: block;
+    font-size: 10px;
+    PADDING: 0PX 29PX;
+}
+
+#rights{
+    font-size: 8px;
+    margin-left: 20%;
+}
+
+#academy a{
+    margin-left: 36%;
+    font-size: 20px;
+}
+
+
+}
+
+
+
+
+
+
+

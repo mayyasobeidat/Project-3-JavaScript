@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class='bx bx-menu sidebarOpen' ></i>
+          <span class="logo navLogo"><a href="../home/index.html"><img src="img/4939715.png" alt=""></a></span>
+
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="../home/index.html"><img src="img/4939715.png" alt=""></a></span> 
+                  <i class='bx bx-x siderbarClose'></i>
+              </div>
+
+              <ul class="nav-links">
+                  <li><a href="../home/index.html">Home</a></li>
+                  <li><a href="../about/about.html">About</a></li>
+                  <li><a href="../cards/cards.html">Developers</a></li>
+                  <li><a href="../contact/contactus.html">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="darkLight-searchBox">
+              <div class="dark-light">
+                  <i class='bx bx-moon moon'></i>
+                  <i class='bx bx-sun sun'></i>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+    nav = document.querySelector("nav"),
+    modeToggle = document.querySelector(".dark-light"),
+    sidebarOpen = document.querySelector(".sidebarOpen"),
+    siderbarClose = document.querySelector(".siderbarClose");
+
+    let getMode = localStorage.getItem("mode");
+        if(getMode && getMode === "dark-mode"){
+          body.classList.add("dark");
+        }
+
+// js code to toggle dark and light mode
+    modeToggle.addEventListener("click" , () =>{
+      modeToggle.classList.toggle("active");
+      body.classList.toggle("dark");
+
+      // js code to keep user selected mode even page refresh or file reopen
+      if(!body.classList.contains("dark")){
+          localStorage.setItem("mode" , "light-mode");
+      }else{
+          localStorage.setItem("mode" , "dark-mode");
+      }
+    });
+
+
+    
+    
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+  nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+  let clickedElm = e.target;
+
+  if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+      nav.classList.remove("active");
+  }
+});
+
+</script>
+    <br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <div class="card front-face">
+        <img src="img/Picsart_22-11-13_21-51-15-319.png" alt="Flip Card">
+      </div>
+      <div class="card back-face">
+        <img src="img/Picsart_22-11-13_21-51-15-319.png" alt="Flip Card">
+        <div class="info">
+          <div class="title">Mayyas Obeidat
+        </div>
+        <p>Full Stack Web Development  <br> at developers academy</p>
+        </div>
+        <ul>
+          <a href="https://m.facebook.com/mayyasobeidat"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://mobile.twitter.com/mayyasobeidat"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mayyasobeidatt/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCvmKGs4W7Dr1x8ByRu_4mJA"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <div class="card front-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.26.58 AM.jpeg" alt="Flip Card">
+      </div>
+      <div class="card back-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.26.58 AM.jpeg" alt="Flip Card">
+        <div class="info">
+          <div class="title">Eman Alfokaha</div>
+          <p>Full Stack Web Development Trainee <br> at Coding academy by Orange</p>
+        </div>
+        <ul>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <div class="card front-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.15.56 AM.jpeg" alt="Flip Card">
+      </div>
+      <div class="card back-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.15.56 AM.jpeg" alt="Flip Card">
+        <div class="info">
+          <div class="title">Ahmed Hamaideh</div>
+          <p>Full Stack Web Development  <br> at developers academy</p>
+        </div>
+        <ul>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <div class="card front-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.15.36 AM.jpeg" alt="Flip Card">
+      </div>
+      <div class="card back-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 12.15.36 AM.jpeg" alt="Flip Card">
+        <div class="info">
+          <div class="title">Mohammad Alshraideh</div>
+          <p>Full Stack Web Development  <br> at developers academy</p>
+        </div>
+        <ul>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <div class="card front-face"><img src="img/WhatsApp Image 2022-11-14 at 8.23.28 AM.jpeg" alt="">
+      </div>
+      <div class="card back-face">
+        <img src="img/WhatsApp Image 2022-11-14 at 8.23.28 AM.jpeg" alt="Flip Card">
+        <div class="info">
+          <div class="title">Lujain Alnouti</div>
+          <p>Full Stack Web Development  <br> at developers academy</p>
+        </div>
+        <ul>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <br><br><br>
+    <footer id="footer1">
+      <p id="rights">© 2022 Developers Academy. All Rights Reserved</p>
+    </footer>
+  
+  </body>
+</html>

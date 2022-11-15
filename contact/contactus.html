@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="contactus.css">
+
+
+
+  
+</head>
+<body>
+
+      <!-- Navbar code -->
+
+      <nav id="navbar">
+
+
+        <a href="../home/index.html"><img id="logo" src="../images/logo.png"></a>
+
+      </nav>
+
+      <!-- page  -->
+
+      <h2 class="f-color">Reach Us For Any Qustions You Might Have.</h2>
+
+
+      <div id="first-page"> 
+        
+        <div id="left-about">
+          <h2 class="s-color">Send Request</h2>
+          <input type="text" class="inp" id="names" placeholder=" Your Name*" >
+          <input type="text" class="inp" id="emails" placeholder=" Your Email*">
+          <textarea name="" id="messages" cols="30" rows="10" placeholder=" Your Message*"></textarea>
+          <button type="submit" value="Submit" onclick="PersonalData()" id="btn-send">Send</button>
+
+
+      </div>
+
+        <img src="../images/contact1.png" id="first-img">
+
+      </div>
+
+            <!-- footer -->
+
+
+            <footer id="footer1">
+              <p id="rights">© 2022 Developers Academy. All Rights Reserved</p>
+            </footer>
+        
+      
+  
+
+
+    
+            <script>
+
+
+              function PersonalData()
+              {
+ 
+                 var x =document.getElementById("names").value;
+                 localStorage.setItem("names",x);
+                 localStorage.getItem("names");
+                 
+           
+           
+                 var y =document.getElementById("emails").value;
+                 localStorage.setItem("emails",y);
+                 localStorage.getItem("emails");
+           
+                 
+                 var z =document.getElementById("messages").value;
+                 localStorage.setItem("messages",z);
+                 localStorage.getItem("messages");
+           
+               }
+           
+              </script>
+</body>
+</html>
