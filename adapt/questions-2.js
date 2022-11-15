@@ -66,7 +66,14 @@
     },
 
   ];
+  let u = 0
+  for (let i = 1; i <= localStorage.length; i++) {
+    if(sessionStorage.getItem('username') == JSON.parse(localStorage.getItem(i)).username) {
+      u = i
+    }
 
+  
+  }
 
  
   // define document elements
@@ -126,13 +133,18 @@
 
             score++;
             percentage += 6
+
+            let objec = JSON.parse(localStorage.getItem(u))
+ objec.result = score
+ objec.perc = percentage
+
+ localStorage.setItem(u,JSON.stringify(objec)) 
         }
 
-        if(allscore == 0){
-          sessionStorage.setItem('q5' , answer)
-        }else{
-          sessionStorage.setItem(`q${5+allscore}` , answer)
-        }
+        let objec = JSON.parse(localStorage.getItem(u))
+        objec.answers.push(answer)
+        localStorage.setItem(u,JSON.stringify(objec)) 
+      
 
          
 

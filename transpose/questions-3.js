@@ -105,7 +105,14 @@
 
   ];
 
+  let u = 0
+  for (let i = 1; i <= localStorage.length; i++) {
+    if(sessionStorage.getItem('username') == JSON.parse(localStorage.getItem(i)).username) {
+      u = i
+    }
 
+  
+  }
 
 
 
@@ -166,14 +173,15 @@
  
              score++;
              percentage += 5
+             let objec = JSON.parse(localStorage.getItem(u))
+ objec.result = score
+ objec.perc = percentage
+ localStorage.setItem(u,JSON.stringify(objec)) 
          }
  
-         if(allscore == 0){
-          sessionStorage.setItem('q12' , answer)
-        }else{
-          sessionStorage.setItem(`q${12+allscore}` , answer)
-        }
- 
+         let objec = JSON.parse(localStorage.getItem(u))
+         objec.answers.push(answer)
+         localStorage.setItem(u,JSON.stringify(objec)) 
  
          currentQuiz++;
          deselectAnswer();

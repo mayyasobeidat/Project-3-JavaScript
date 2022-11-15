@@ -176,7 +176,6 @@ p{
   align-items: center;
   font-size: 14px;
   line-height: 25px;
-  width: 800px;
  margin: 8px 0;
   color: #F5F5F5;
 
@@ -194,133 +193,6 @@ p{
   text-transform:capitalize;
   border-radius: 40px;
 }
-@media (max-width: 500px) {
-  .bx bx-menu sidebarOpen .logo navLogo img{
-    width: 100%;
-    height:40% ;
-    color: #010718;
-  }
-  nav .nav-bar .logo img{
-  width: 100%;
-  top: 50%; 
-  color:#010718; 
- }
- nav .nav-bar .sidebarOpen{
-     display: block;
-     width: 100%;
-     
- }
-
- .menu{
-     position: fixed;
-    
-    
-   
-    
-     background-color:#F5F5F5;
-     z-index: 100;
-     transition: all 0.4s ease;
- }
-
- 
-
- nav.active .nav-bar .navLogo img{
-     opacity: 0;
-     transition: all 0.3s ease;
-     color: #010718;
-     background-color: #010718;
- }
-
- .menu .logo-toggle{
-     display: #168371;
-     width: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     margin: 50%;
- }
-
- .logo-toggle .siderbarClose{
-     color: var(--text-color);
-     font-size: 50px;
-     cursor: pointer;
-     width: 100%;
- }
-
- .nav-bar .nav-links{
-     flex-direction: column;
-     padding-top:60px;
- }
-
- .nav-links li a{
-     display: block;
-     margin-top: 50%;
-     margin-top: 40%;
- }
- .darkLight-searchBox .dark-light .bx bx-moon moon{
-  width: 100%;
-  margin-right: 100%;
- }
-}
-
-
-
-
-@media (max-width: 790px) {
-  nav .nav-bar .logo a{
-     font-size: 20px;  
-  }
-  nav .nav-bar .sidebarOpen{
-      display: block;
-      
-  }
-
-  .menu{
-      position: fixed;
-      height: 100%;
-      width: 320px;
-      left: -100%;
-      top: 0;
-      padding: 20px;
-      background-color:#F5F5F5;
-      z-index: 100;
-      transition: all 0.4s ease;
-  }
-
-  nav.active .menu{
-      left: -0%;
-  }
-
-  nav.active .nav-bar .navLogo a{
-      opacity: 0;
-      transition: all 0.3s ease;
-  }
-
-  .menu .logo-toggle{
-      display: #168371;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-
-  .logo-toggle .siderbarClose{
-      color: var(--text-color);
-      font-size: 24px;
-      cursor: pointer;
-  }
-
-  .nav-bar .nav-links{
-      flex-direction: column;
-      padding-top: 30px;
-  }
-
-  .nav-links li a{
-      display: block;
-      margin-top: 20px;
-  }
-}
-
 
 
 /* Slides */
@@ -372,16 +244,18 @@ margin-bottom: 10%;
 #rights{
   color: #F5F5F5;
   font-size: 10px;
-  margin-left: 35%;
 }
 
+#hi{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 70%;
+  padding-top: 116px;
+  justify-content: center
 
-
-
-
-
-
-
+}
 
 
 
@@ -405,8 +279,8 @@ html,body{
 }
 .wrapper .card{
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   padding: 5px;
   background: #fff;
   border-radius: 10px;
@@ -474,3 +348,255 @@ html,body{
   text-align: center;
   color: #010718;
 }
+
+
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width:768px){
+
+
+  nav .nav-bar .logo img {
+
+    width: 21%;
+  }
+
+  .menu .logo-toggle .logo img {
+    width: 244px;
+    height: 83px;
+}
+
+
+
+  .bx-menu:before {
+    font-size: 52px;
+}
+
+
+  nav .nav-bar .logo a{
+     font-size: 20px;  
+  }
+  nav .nav-bar .sidebarOpen{
+      display: block;
+      
+  }
+
+  .menu{
+      position: fixed;
+      height: 100%;
+      width: 320px;
+      left: -100%;
+      top: 0;
+      padding: 20px;
+      background-color:#F5F5F5;
+      z-index: 100;
+      transition: all 0.4s ease;
+  }
+
+  nav.active .menu{
+      left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a{
+      opacity: 0;
+      transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle{
+      display: #168371;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose{
+      color: var(--text-color);
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .nav-bar .nav-links{
+      flex-direction: column;
+      padding-top: 30px;
+  }
+
+  .nav-links li a{
+      display: block;
+      margin-top: 20px;
+  }
+}
+
+
+@media only screen and (min-device-width: 0px) and (max-device-width:480px){
+
+  nav .nav-bar .logo img{
+    width: 100%;
+}
+
+  .bx bx-menu sidebarOpen .logo navLogo img{
+    width: 100%;
+    height:40% ;
+    color: #010718;
+  }
+
+
+
+
+  nav .nav-bar .logo img{
+  width: 40%;
+  top: 50%; 
+  color:#010718; 
+ }
+ nav .nav-bar .sidebarOpen{
+     display: block;
+     width: 100%;
+     
+ }
+
+ .menu{
+     position: fixed;
+    
+    
+   
+    
+     background-color:#F5F5F5;
+     z-index: 100;
+     transition: all 0.4s ease;
+ }
+
+ 
+
+ nav.active .nav-bar .navLogo img{
+     opacity: 0;
+     transition: all 0.3s ease;
+     color: #010718;
+     background-color: #010718;
+ }
+
+ .menu .logo-toggle{
+     display: #168371;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin: 50%;
+ }
+
+ .logo-toggle .siderbarClose{
+     color: var(--text-color);
+     font-size: 50px;
+     cursor: pointer;
+     width: 100%;
+ }
+
+ .nav-bar .nav-links{
+     flex-direction: column;
+     padding-top:60px;
+ }
+
+ .nav-links li a{
+     display: block;
+     margin-top: 50%;
+     margin-top: 40%;
+ }
+ .darkLight-searchBox .dark-light .bx bx-moon moon{
+  width: 100%;
+  margin-right: 100%;
+ }
+
+ #hi {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 70%;
+  padding-top: 116px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+
+nav .nav-bar .logo img {
+
+  width: 21%;
+}
+
+.menu .logo-toggle .logo img {
+  width: 244px;
+  height: 83px;
+}
+
+
+
+.bx-menu:before {
+  font-size: 52px;
+}
+
+
+nav .nav-bar .logo a{
+   font-size: 20px;  
+}
+nav .nav-bar .sidebarOpen{
+    display: block;
+    
+}
+
+.menu{
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    background-color:#F5F5F5;
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
+nav.active .menu{
+    left: -0%;
+}
+
+nav.active .nav-bar .navLogo a{
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu .logo-toggle{
+    display: #168371;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-toggle .siderbarClose{
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-bar .nav-links{
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.nav-links li a{
+    display: block;
+    margin-top: 20px;
+}
+
+.wrapper {
+  height: 1405px;
+  width: 1042px;
+
+}
+
+
+
+}
+
+
+
+

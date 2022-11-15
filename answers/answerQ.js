@@ -8,11 +8,25 @@ for (let i = 0; i < r.length; i++) {
 }
 
 
-for (let i = 0; i < 22; i++) {
+
+let u = 0
+for (let i = 1; i <= localStorage.length; i++) {
+  if(sessionStorage.getItem('username') == JSON.parse(localStorage.getItem(i)).username) {
+    u = i
+
+  }
+ 
+}
+let objec = JSON.parse(localStorage.getItem(u))
+let answerArr = objec.answers
+
+
+
+for (let i = 0; i < answerArr.length; i++) {
   if(i == 4 || i == 11){
     continue
   }
-  document.getElementById("Q"+i).innerHTML+=" "+sessionStorage.getItem("q"+i);
+  document.getElementById("Q"+i).innerHTML+=" "+ answerArr[i];
   
 }
 

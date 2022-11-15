@@ -41,18 +41,24 @@
             </div>
         </div>
     </nav>
+    <br><br>
 
-
+<div id="welcome">
     <div id="a">
-        <h1>Welcome Page
-        </h1>
+        <div id="acad">
+        <h1 id="well">Welcome </h1>
         <p>This level is divided into three parts: imitation, adaptation, and transposition, with the first part accounting for 20% of the total, the second 30%, and the third 50%.
             If your score is higher than 50%, you will advance to the second set; otherwise, you will have to retake the test next year.
             Good Luke
             </p>
-            <br><br><br><br>
-            <a href="../imitate/imitate-Level.html">start</a>
+            <br>
+            <a id="srart" href="../imitate/imitate-Level.html">start</a>
     </div>
+</div>
+
+    <div id="jo"><img id="acad1" class="acad" src="../welcomepage/css/man-have-question-hand-raised-up-group-people-business-conference-modern-classroom-daytime.jpg"></div>
+
+</div>
     <br><br><br><br><br><br><br>
     <footer id="footer2">
         <p id="r">© 2022 Developers Academy. All Rights Reserved</p>
@@ -100,6 +106,9 @@
                 nav.classList.remove("active");
             }
         });
+
+        document.getElementById("well").innerHTML+=" "+sessionStorage.getItem("username");
+
         </script>
     </body>
 </html>

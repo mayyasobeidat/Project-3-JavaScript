@@ -41,7 +41,7 @@ body{
     justify-content: space-between;
     padding: 5% 10%;
     align-items: center;
-    gap: 30px;
+    gap: 100px;
    
 
 }
@@ -52,7 +52,7 @@ body{
     justify-content: space-between;
     padding: 5% 10%;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
 
 
 }
@@ -60,7 +60,7 @@ body{
 
 
 #first-img{
-    width: 30%;
+    width: 40%;
 }
 
 
@@ -78,7 +78,7 @@ body{
     font-size: 18px;
     padding-top: 10px;
     color: #F5F5F5;
-    line-height:40px;    
+    line-height:30px;    
 
 
 }
@@ -129,6 +129,17 @@ li {
 
     line-height: 30px;
 }
+
+#hi{
+    width: 80%;
+    
+    
+}
+
+#hello{
+    width: 100%;
+    display: flex;
+    justify-content: center}
 
 
 
@@ -255,12 +266,19 @@ li {
 
             #wrapp{
                 flex-direction: row-reverse;
-    align-items: flex-start;
+                align-items: flex-start;
+                gap: 70px;
             }
             li{
                    
             font-size: 13px;
             line-height: 19px;}
+
+            #hi{
+                width: 95%;
+                
+                
+            }
 
       
 
