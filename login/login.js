@@ -58,6 +58,8 @@ function g(t) {
 }
 
 
-
+function clr() {
+    sessionStorage.clear()
+}
 
 

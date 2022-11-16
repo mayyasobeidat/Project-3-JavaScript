@@ -10,7 +10,7 @@
 
   
 </head>
-<body>
+<body onload="redirect()">
 
       <!-- Navbar code -->
 
@@ -40,9 +40,17 @@
       <footer id="footer1">
         <p id="rights">© 2022 Developers Academy. All Rights Reserved</p>
       </footer>
-  
 
-
+      <script>
+        function redirect() {
+      if (sessionStorage.length == 0) {
+        document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../login/login.html'" />
+      }
+      if ( sessionStorage.getItem('done') == 'true') {
+        document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../result/index.html'" />
+      }
+    }
+      </script>
     
     
 </body>

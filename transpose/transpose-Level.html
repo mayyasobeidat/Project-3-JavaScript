@@ -10,7 +10,7 @@
 
   
 </head>
-<body>
+<body onload="redirect()">
 
       <!-- Navbar code -->
 
@@ -43,7 +43,14 @@
     </footer>
 
 
-    
+    <script>
+      if (sessionStorage.length == 0) {
+        document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../login/login.html'" />
+      }
+      if ( sessionStorage.getItem('done') == 'true') {
+        document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../result/index.html'" />
+      }
+    </script>
     
 </body>
 </html>

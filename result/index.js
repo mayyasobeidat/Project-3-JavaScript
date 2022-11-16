@@ -16,12 +16,19 @@
   document.getElementById('wrong-answers').firstElementChild.innerHTML = 20 - objec.result
   document.getElementById('final-score').firstElementChild.innerHTML = objec.perc + '%'
 
+
  let line = document.getElementById('line')
 let resImg = document.getElementById("result-right-side")
 let finalScore = document.getElementById('final-score')
 let resPara = document.getElementById('result-paragraph')
  function page() {
- 
+    if (sessionStorage.length == 0) {
+        document.head.innerHTML = `<meta http-equiv="Refresh" content="0; url='../login/login.html'" />`
+      }
+    if(objec.answers.length >= 22){
+        sessionStorage.setItem('done' , true)
+    }
+
 
 
     if(objec.perc < 50){
@@ -38,5 +45,6 @@ let resPara = document.getElementById('result-paragraph')
  }
 
  function clearScore(){
+
     sessionStorage.clear()
  }

@@ -89,7 +89,16 @@ ul {
 #first-img{
     width: 38.4%;
 }
-
+.wrongAns{
+    color: red;
+    font-size: larger;
+    margin-left: 10px;
+}
+.correctAns{
+    color: #168371;
+    font-size: larger;
+    margin-left: 10px;
+}
 
 .first-title{
     font-size: 75px;

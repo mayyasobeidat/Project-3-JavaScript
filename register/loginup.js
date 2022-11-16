@@ -1,6 +1,8 @@
 let errors = document.getElementById('errors')
 var exist=document.getElementById('signup');
 let aa = document.getElementById('signup')
+
+
 function repasss() {
     let password = sessionStorage.getItem('password')
     let repassword = sessionStorage.getItem('repassword')
@@ -66,7 +68,6 @@ function repasss() {
 
 
 }
-
 
 
 

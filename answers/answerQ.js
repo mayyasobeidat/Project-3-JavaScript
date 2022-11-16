@@ -26,7 +26,14 @@ for (let i = 0; i < answerArr.length; i++) {
   if(i == 4 || i == 11){
     continue
   }
-  document.getElementById("Q"+i).innerHTML+=" "+ answerArr[i];
+  document.getElementById("Q"+i).innerHTML+= answerArr[i];
   
 }
 
+
+function redirect() {
+  if (sessionStorage.length == 0) {
+    document.head.innerHTML = `<meta http-equiv="Refresh" content="0; url='../login/login.html'" />`
+  }
+  
+}

@@ -187,7 +187,7 @@ p{
     font-size: 14px;
     line-height: 25px;
    margin: 8px 0;
-    color: #F5F5F5;
+    color: #e4e4e4;
  
 }
 
@@ -202,8 +202,13 @@ p{
 
 #all{
     display: flex;
-    justify-content: center
+    justify-content: center;
 
+}
+
+#signin:hover{
+    background-color: #242526;
+    color: #168371;
 }
 
 
@@ -211,12 +216,13 @@ p{
 /* Slides */
 .container{
     margin-top: 8%;
-    width: 85%;
-    height: 650px;
+    width: 65%;
+    height: 100px;
     background-color: #168371;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom:20%;
  
 
    
@@ -243,7 +249,37 @@ margin-bottom: 10%;
     color:#fff ;
 }
 
+#last-setion{
+    display: flex;
+   align-items: flex-start;
+}
 
+#last-setion-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vision{
+    background-color: #0e5c4f;
+    /* border: #168371 solid; */
+    padding: 50px;
+
+}
+#mission{
+    background-color: #0e5c4f;
+    /* border: #168371 solid; */
+    padding: 75px;
+
+
+}
+.p-last{
+    color: #F5F5F5;
+}
+
+h3 {
+    color: #F5F5F5;
+}
 
 #academy{
     display: flex;
@@ -251,6 +287,8 @@ margin-bottom: 10%;
     align-items: center;
     color: #F5F5F5;
     justify-content: center;
+    height: 650px;
+
 }
 #academy h1{
     text-align: center;
@@ -302,6 +340,23 @@ margin-bottom: 10%;
     nav .nav-bar .sidebarOpen{
         display: block;
         
+    }
+
+    #vision {
+  
+        height: 400px;
+    }
+
+    #mission {
+  
+        height: 400px;
+        padding: 50px;
+    }
+
+    #academy {
+      
+        height: 391px;
+    padding-top: 162px;
     }
 
     .container {
@@ -440,9 +495,33 @@ p{
 
 }
 
+#last-setion {
+    flex-wrap: wrap;
+}
+
+#academy{
+        height: 380px;
+    }
+
+    .p-last {
+        font-size: 10px;
+    }
+
+    #mission {
+        height: 250px;
+    }
+
+    #vision {
+        height: 355px;
+    }
+
 
 
 }
+
+
+
+
 
 
 

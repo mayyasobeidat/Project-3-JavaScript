@@ -168,20 +168,21 @@
       alert("You Should Select an Answer First !")
          return;
      }
- 
-         if (answer == quizData[currentQuiz].correct){
- 
-             score++;
-             percentage += 5
-             let objec = JSON.parse(localStorage.getItem(u))
- objec.result = score
- objec.perc = percentage
- localStorage.setItem(u,JSON.stringify(objec)) 
-         }
- 
-         let objec = JSON.parse(localStorage.getItem(u))
-         objec.answers.push(answer)
-         localStorage.setItem(u,JSON.stringify(objec)) 
+
+
+     let objec = JSON.parse(localStorage.getItem(u))
+     if (answer == quizData[currentQuiz].correct){
+score++
+         percentage += 5
+         objec.result = score
+         objec.perc = percentage
+         objec.answers.push(`<span>${answer}</span><span class = "correctAns" >&#10003;</span>`)
+     }else if (answer != quizData[currentQuiz].correct){
+       objec.answers.push(`<span>${answer}</span><span class = "wrongAns" >&#10007;</span>`)
+     }
+   
+     
+     localStorage.setItem(u,JSON.stringify(objec)) 
  
          currentQuiz++;
          deselectAnswer();
@@ -207,4 +208,11 @@
      });
  
      LoadQuizDataAndStart();
- 
+     function redirect() {
+      if (sessionStorage.length == 0) {
+        document.head.innerHTML = `<meta http-equiv="Refresh" content="0; url='../login/login.html'" />`
+      }
+      if ( sessionStorage.getItem('done') == 'true') {
+        document.head.innerHTML = `<meta http-equiv="Refresh" content="0; url='../result/index.html'" />`
+      }
+    }

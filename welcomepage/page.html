@@ -13,7 +13,7 @@
     <!-- ===== swiper slider===== -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
-<body>
+<body onload="redirect()">
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen' ></i>
@@ -29,7 +29,6 @@
                     <li><a href="../home/index.html">Home</a></li>
                     <li><a href="../about/about.html">About</a></li>
                     <li><a href="../cards/cards.html">Developers</a></li>
-                    <li><a href="../contact/contactus.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -42,7 +41,7 @@
         </div>
     </nav>
     <br><br>
-
+<div id="last1">
 <div id="welcome">
     <div id="a">
         <div id="acad">
@@ -59,56 +58,65 @@
     <div id="jo"><img id="acad1" class="acad" src="../welcomepage/css/man-have-question-hand-raised-up-group-people-business-conference-modern-classroom-daytime.jpg"></div>
 
 </div>
+</div>
+
+
+
+
     <br><br><br><br><br><br><br>
     <footer id="footer2">
         <p id="r">© 2022 Developers Academy. All Rights Reserved</p>
       </footer>
     
 
-    <script>
-
-        const body = document.querySelector("body"),
-              nav = document.querySelector("nav"),
-              modeToggle = document.querySelector(".dark-light"),
-              sidebarOpen = document.querySelector(".sidebarOpen"),
-              siderbarClose = document.querySelector(".siderbarClose");
-        
-              let getMode = localStorage.getItem("mode");
-                  if(getMode && getMode === "dark-mode"){
-                    body.classList.add("dark");
+      <script>
+        function redirect() {
+        if (sessionStorage.length == 0) {
+          document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../home/index.html'" />
+        }
+      }
+          const body = document.querySelector("body"),
+                nav = document.querySelector("nav"),
+                modeToggle = document.querySelector(".dark-light"),
+                sidebarOpen = document.querySelector(".sidebarOpen"),
+                siderbarClose = document.querySelector(".siderbarClose");
+  
+                let getMode = localStorage.getItem("mode");
+                    if(getMode && getMode === "dark-mode"){
+                      body.classList.add("dark");
+                    }
+  
+          // js code to toggle dark and light mode
+                modeToggle.addEventListener("click" , () =>{
+                  modeToggle.classList.toggle("active");
+                  body.classList.toggle("dark");
+  
+                  // js code to keep user selected mode even page refresh or file reopen
+                  if(!body.classList.contains("dark")){
+                      localStorage.setItem("mode" , "light-mode");
+                  }else{
+                      localStorage.setItem("mode" , "dark-mode");
                   }
-        
-        // js code to toggle dark and light mode
-              modeToggle.addEventListener("click" , () =>{
-                modeToggle.classList.toggle("active");
-                body.classList.toggle("dark");
-        
-                // js code to keep user selected mode even page refresh or file reopen
-                if(!body.classList.contains("dark")){
-                    localStorage.setItem("mode" , "light-mode");
-                }else{
-                    localStorage.setItem("mode" , "dark-mode");
-                }
-              });
-        
-        
-              
-              
-        //   js code to toggle sidebar
-        sidebarOpen.addEventListener("click" , () =>{
-            nav.classList.add("active");
-        });
-        
-        body.addEventListener("click" , e =>{
-            let clickedElm = e.target;
-        
-            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-                nav.classList.remove("active");
-            }
-        });
-
-        document.getElementById("well").innerHTML+=" "+sessionStorage.getItem("username");
-
-        </script>
+                });
+  
+  
+  
+  
+          //   js code to toggle sidebar
+          sidebarOpen.addEventListener("click" , () =>{
+              nav.classList.add("active");
+          });
+  
+          body.addEventListener("click" , e =>{
+              let clickedElm = e.target;
+  
+              if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                  nav.classList.remove("active");
+              }
+          });
+  
+          document.getElementById("well").innerHTML+=" "+sessionStorage.getItem("username");
+  
+          </script>
     </body>
 </html>
