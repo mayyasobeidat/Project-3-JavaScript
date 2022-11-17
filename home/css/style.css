@@ -54,7 +54,7 @@ body.dark nav{
 nav .nav-bar{
     position: relative;
     height: 100%;
-    max-width: 86%;
+    max-width: 100%;
     width: 100%;
     background-color: var(--nav-color);
     margin: 0 auto;
@@ -95,9 +95,8 @@ nav .nav-bar .logo img{
 }
 
 .nav-bar .nav-links li{
-    margin: 0 5px;
+    margin: 0 10px;
     list-style: none;
-    padding-right: 20px;
 }
 
 .nav-links li a{
@@ -334,9 +333,7 @@ h3 {
 
 
 @media (max-width: 768px) {
-    nav .nav-bar .logo a{
-       font-size: 20px;  
-    }
+ 
     nav .nav-bar .sidebarOpen{
         display: block;
         
@@ -415,17 +412,31 @@ h3 {
 
     .nav-bar .nav-links{
         flex-direction: column;
-        padding-top: 30px;
     }
 
     .nav-links li a{
         display: block;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
-    .menu .logo-toggle .logo img{
-        width: 250px;
+    .menu .logo-toggle .logo img {
+        width: 241px;
+        height: 72px;
     }
+
+    nav .nav-bar .logo img {
+
+        width: 20%;
+      }
+    
+      .bx-menu:before {
+        font-size: 45px;
+    }
+    
+    .bx-moon:before {
+      font-size: 40px;
+    }
+
 }
 
 
@@ -433,6 +444,11 @@ h3 {
 
 @media (max-width: 480px) {
 
+
+    .menu{
+        height: 25%;
+        width: 321px;
+    }
 
     #academy h1 {
         font-size: 23px;
@@ -450,19 +466,21 @@ h3 {
         align-items: flex-end;
 
         margin-top: 20%;
-    width: 130%;
+    width: 115%;
 
         
 
        }
 
     nav .nav-bar .logo img {
+        display: none;
         width: 50%;
 
     }
 
     nav .nav-bar{
         padding: 0;
+        max-width:90%;
     }
 
 
@@ -514,6 +532,33 @@ p{
     #vision {
         height: 355px;
     }
+
+    .menu .logo-toggle {
+        display: #168371;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;}
+
+
+        .nav-links li a {
+            display: block;
+            font-size: 17px;
+            font-weight: 400;
+
+}
+
+.bx-moon:before {
+    font-size: 35px;
+}
+
+.bx-menu:before {
+    font-size: 35px;
+}
+
+
+
+
 
 
 

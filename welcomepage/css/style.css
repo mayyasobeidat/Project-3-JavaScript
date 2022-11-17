@@ -86,7 +86,7 @@ body.dark nav{
 nav .nav-bar{
     position: relative;
     height: 100%;
-    max-width: 86%;
+    max-width: 100%;
     width: 100%;
     background-color: var(--nav-color);
     margin: 0 auto;
@@ -263,9 +263,12 @@ nav .nav-bar .logo img{
 
 @media (max-width: 480px) {
 
-    nav .nav-bar .logo img{
-        width: 100%;
+    #r{
+        margin-left: 0;
     }
+
+    nav .nav-bar .logo img{
+display: none;    }
 
     #a p {font-size: 12px;}
 
@@ -300,12 +303,18 @@ nav .nav-bar .logo img{
 }
 
 @media (max-width: 768px) {
-    nav .nav-bar .logo a{
-       font-size: 20px;  
-    }
+  
     nav .nav-bar .sidebarOpen{
         display: block;
         
+    }
+
+    .bx-menu:before {
+        font-size: 40px;
+    }
+
+    .bx-moon:before{
+        font-size: 40px;
     }
 
     .menu{

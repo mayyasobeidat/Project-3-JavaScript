@@ -360,6 +360,14 @@ html,body{
     width: 21%;
   }
 
+  .bx-menu:before {
+    font-size: 45px;
+}
+
+.bx-moon:before {
+  font-size: 45px;
+}
+
   .menu .logo-toggle .logo img {
     width: 244px;
     height: 83px;
@@ -424,6 +432,9 @@ html,body{
       display: block;
       margin-top: 20px;
   }
+
+
+
 }
 
 
@@ -437,6 +448,10 @@ html,body{
     width: 100%;
     height:40% ;
     color: #010718;
+  }
+
+  .bx-x:before{
+    font-size: 50px;
   }
 
 
@@ -453,16 +468,7 @@ html,body{
      
  }
 
- .menu{
-     position: fixed;
-    
-    
-   
-    
-     background-color:#F5F5F5;
-     z-index: 100;
-     transition: all 0.4s ease;
- }
+
 
  
 
@@ -479,14 +485,12 @@ html,body{
      display: flex;
      align-items: center;
      justify-content: space-between;
-     margin: 50%;
  }
 
  .logo-toggle .siderbarClose{
      color: var(--text-color);
      font-size: 50px;
      cursor: pointer;
-     width: 100%;
  }
 
  .nav-bar .nav-links{
@@ -496,8 +500,10 @@ html,body{
 
  .nav-links li a{
      display: block;
-     margin-top: 50%;
-     margin-top: 40%;
+     /* margin-top: 50%;
+     margin-top: 40%; */
+     font-size: 55px;
+  font-weight: 400;
  }
  .darkLight-searchBox .dark-light .bx bx-moon moon{
   width: 100%;
@@ -506,23 +512,20 @@ html,body{
 
  #hi {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  width: 70%;
-  padding-top: 116px;
-  justify-content: center;
+
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+
 }
 
 
 nav .nav-bar .logo img {
 
-  width: 21%;
+  width: 73%;
+  margin-right: 682px;
 }
 
 .menu .logo-toggle .logo img {
+  display: none;
   width: 244px;
   height: 83px;
 }
@@ -556,6 +559,7 @@ nav .nav-bar .sidebarOpen{
 
 nav.active .menu{
     left: -0%;
+    padding: 40px;
 }
 
 nav.active .nav-bar .navLogo a{
@@ -588,10 +592,40 @@ nav.active .nav-bar .navLogo a{
 }
 
 .wrapper {
-  height: 1405px;
-  width: 1042px;
+  height: 948px;
+    width: 100%;
+    margin-left: 65px;
+    padding-top: 210px;
 
 }
+
+
+nav .nav-bar {
+  height: 287%;
+  max-width: 172%;}
+
+  .bx-moon:before {
+    font-size: 110px;
+    margin-right: 105px;
+}
+
+.bx-menu:before{
+  font-size: 110px;
+  margin-left: 20px;
+
+
+
+}
+
+
+.menu{
+  position: fixed;
+  background-color:#F5F5F5;
+  z-index: 100;
+  transition: all 0.4s ease;
+  height: 25%;
+  width: 981px;}
+
 
 
 

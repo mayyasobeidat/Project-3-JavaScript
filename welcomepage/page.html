@@ -72,7 +72,7 @@
       <script>
         function redirect() {
         if (sessionStorage.length == 0) {
-          document.head.innerHTML = <meta http-equiv="Refresh" content="0; url='../home/index.html'" />
+          document.head.innerHTML = `<meta http-equiv="Refresh" content="0; url='../home/index.html'" />`
         }
       }
           const body = document.querySelector("body"),
@@ -116,6 +116,7 @@
           });
   
           document.getElementById("well").innerHTML+=" "+sessionStorage.getItem("username");
+          
   
           </script>
     </body>

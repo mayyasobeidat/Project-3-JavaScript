@@ -287,12 +287,14 @@ margin-top: 90px;
     .login_form{
         position: relative;
         height: 0 !important;
+        margin-left: 120px;
+
     }
     .login_registre,.login_create{
         /* position: absolute;
         bottom: 1rem; */
         width:112.8%;
-        margin: 110px 668px;
+        margin: 110px 580px;
         padding: 2rem 1rem;
         border-radius: 1rem;
         text-align: center;
