@@ -354,6 +354,10 @@ html,body{
 
 @media only screen and (min-device-width: 481px) and (max-device-width:768px){
 
+  nav .nav-bar{
+
+    max-width: 90%;}
+
 
   nav .nav-bar .logo img {
 
@@ -442,6 +446,7 @@ html,body{
 
   nav .nav-bar .logo img{
     width: 100%;
+    display: none;
 }
 
   .bx bx-menu sidebarOpen .logo navLogo img{
@@ -605,7 +610,7 @@ nav .nav-bar {
   max-width: 172%;}
 
   .bx-moon:before {
-    font-size: 110px;
+    font-size: 100px;
     margin-right: 105px;
 }
 
