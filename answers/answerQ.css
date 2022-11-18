@@ -57,6 +57,7 @@ ul {
     padding: 10px;
     justify-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 
 .fa-solid{
@@ -149,6 +150,8 @@ ul {
         flex-wrap: wrap;
         gap: 20px;
             padding: 7.5% 9%;
+            padding-top: 100px;
+
         
     }
 
@@ -253,7 +256,8 @@ ul {
     #first-page {
         flex-wrap: wrap;
         gap: 30px;
-        align-content: center
+        align-content: center;
+        padding-top: 100px;
     }
 
     #box1{

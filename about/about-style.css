@@ -5,6 +5,10 @@
     --dark: #37474F;
 }
 
+nav{
+    position: fixed;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -139,7 +143,9 @@ li {
 #hello{
     width: 100%;
     display: flex;
-    justify-content: center}
+    justify-content: center;
+    padding-top: 30px;
+}
 
 
 
